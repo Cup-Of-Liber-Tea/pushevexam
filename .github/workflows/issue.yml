@@ -1,0 +1,10 @@
+name: Issue
+on: issues
+jobs:
+  print-issue-title-and-body:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print issue title
+        run: echo "${{ github.event.issue.title}}"
+      - name: print issue body
+        run: echo "${{ github.event.issue.body}}"
